@@ -686,6 +686,10 @@ bool CMMDVMCal::setFMDeviation()
             m_mode = STATE_FMCAL30K;
    	    ::fprintf(stdout, "FM 30Khz channel spacing with 6.0Khz Deviation (2495hz)" EOL);
             break;
+          case STATE_FMCAL30K:
+            m_mode = STATE_FMDSTARCAL;
+   	    ::fprintf(stdout, "D-Star FM Deviation adjustment using Bessel null method (500hz)" EOL);
+            break;
           default:
             m_mode = STATE_FMCAL10K;
    	    ::fprintf(stdout, "FM 10Khz channel spacing with 2.30Khz Deviation (956hz)" EOL);
